@@ -1,12 +1,16 @@
-import pynupt
+import pynput
+
+from classes.voice import Voice
+
+keyboard = pynput.keyboard
 
 def main():
     
     while(True):
         set_pressed = key_listen()
         if '/' in set_pressed:
-            loader = AutoLoad(capture, mouse)
-            loader.auto_load()
+            v = Voice(keyboard)
+            v.open_shortcut()
 
 def key_listen():
 
