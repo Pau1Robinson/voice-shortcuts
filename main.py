@@ -1,6 +1,6 @@
 import pynput
 
-from classes.voice import Voice
+from voice.voice_shortcuts import Voice
 
 keyboard = pynput.keyboard
 
