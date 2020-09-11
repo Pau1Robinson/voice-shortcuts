@@ -26,6 +26,7 @@ class Voice():
         print(f'detected {response}')
         if response in self.shortcuts_dict:
             print(f'opening {response}')
+            #TODO make number of modifers varable
             with self.controller.pressed(self.shortcuts_dict[response][0][0], self.shortcuts_dict[response][0][1]):
                 self.controller.press(self.shortcuts_dict[response][1])
         else:
